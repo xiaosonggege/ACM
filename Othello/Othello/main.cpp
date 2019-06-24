@@ -19,9 +19,6 @@
 #include <omp.h>
 #include <utility>
 using namespace std;
-bool com(const string &s1, const string &s2) {
-	return s1.size() < s2.size();
-}
 int main()
 {
 	shared_ptr<string> p = make_shared<string>("C:\\Users\\xiaosong\\Desktop\\text.txt");
