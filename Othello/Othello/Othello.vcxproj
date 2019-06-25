@@ -155,6 +155,7 @@
   <ItemGroup>
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Database.h" />
+    <ClInclude Include="Ducci.h" />
     <ClInclude Include="Flooded.h" />
     <ClInclude Include="OthellO.h" />
     <ClInclude Include="pch.h" />
@@ -165,6 +166,7 @@
   <ItemGroup>
     <ClCompile Include="Cube.cpp" />
     <ClCompile Include="Database.cpp" />
+    <ClCompile Include="Ducci.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="OthellO.cpp" />
     <ClCompile Include="pch.cpp">

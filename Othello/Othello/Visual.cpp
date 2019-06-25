@@ -7,6 +7,7 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <memory>
 using namespace std;
 Visual::Visual(const string &ps) : p(ps) {
 	//提取文件中的建筑信息
