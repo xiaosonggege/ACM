@@ -156,6 +156,7 @@
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Database.h" />
     <ClInclude Include="Ducci.h" />
+    <ClInclude Include="Exchange.h" />
     <ClInclude Include="Flooded.h" />
     <ClInclude Include="OthellO.h" />
     <ClInclude Include="pch.h" />

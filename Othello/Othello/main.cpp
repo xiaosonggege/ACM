@@ -6,7 +6,8 @@
 //#include "Database.h"
 //#include "Urban.h"
 //#include "Visual.h"
-#include "Ducci.h"
+//#include "Ducci.h"
+#include "Exchange.h"
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -23,14 +24,9 @@
 using namespace std;
 int main()
 {
-	//shared_ptr<string> p = make_shared<string>("C:\\Users\\xiaosong\\Desktop\\text.txt");
-	vector<int> v = { 8, 1, 1, 2, 7 };
-	vector<vector<int>> v1;
-	shared_ptr<Ducci> d = make_shared<Ducci>(v);
-	tuple<vector<int>, bool> tup = d->print();
-	d->judge(get<0>(tup), v1);
-	tup = d->print();
-	cout << get<1>(tup) << endl;
+	shared_ptr<string> p = make_shared<string>("C:\\Users\\xiaosong\\Desktop\\text.txt");
+	shared_ptr<Exange<string>> e = make_shared<Exange<string>>(*p);
+	e->judge(cout);
 	return 0;
 }
 
