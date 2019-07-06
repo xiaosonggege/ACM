@@ -7,7 +7,9 @@
 //#include "Urban.h"
 //#include "Visual.h"
 //#include "Ducci.h"
-#include "Exchange.h"
+//#include "Exchange.h"
+//#include "Location.h"
+#include "Map.h"
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -25,8 +27,8 @@ using namespace std;
 int main()
 {
 	shared_ptr<string> p = make_shared<string>("C:\\Users\\xiaosong\\Desktop\\text.txt");
-	shared_ptr<Exange<string>> e = make_shared<Exange<string>>(*p);
-	e->judge(cout);
+	shared_ptr<Map> m = make_shared<Map>(*p);
+	m->finding(cout);
 	return 0;
 }
 

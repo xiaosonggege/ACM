@@ -153,11 +153,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Comparing.h" />
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Database.h" />
     <ClInclude Include="Ducci.h" />
     <ClInclude Include="Exchange.h" />
     <ClInclude Include="Flooded.h" />
+    <ClInclude Include="Location.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="OthellO.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Unixls.h" />
@@ -169,6 +172,7 @@
     <ClCompile Include="Database.cpp" />
     <ClCompile Include="Ducci.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="OthellO.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

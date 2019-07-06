@@ -45,6 +45,15 @@
     <ClInclude Include="Exchange.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Location.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Comparing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -69,6 +78,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Ducci.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
