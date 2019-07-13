@@ -54,6 +54,15 @@
     <ClInclude Include="Comparing.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Topic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Kehu.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Processing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -81,6 +90,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Map.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Topic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Processing.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -159,10 +159,13 @@
     <ClInclude Include="Ducci.h" />
     <ClInclude Include="Exchange.h" />
     <ClInclude Include="Flooded.h" />
+    <ClInclude Include="Kehu.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="OthellO.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Processing.h" />
+    <ClInclude Include="Topic.h" />
     <ClInclude Include="Unixls.h" />
     <ClInclude Include="Urban.h" />
     <ClInclude Include="Visual.h" />
@@ -180,6 +183,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Processing.cpp" />
+    <ClCompile Include="Topic.cpp" />
     <ClCompile Include="Unixls.cpp" />
     <ClCompile Include="Visual.cpp" />
   </ItemGroup>
