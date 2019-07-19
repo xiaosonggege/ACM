@@ -8,7 +8,7 @@ using namespace std;
 class Topic {
 public:
 	int tid; //主题的唯一标识符
-	int  num; //主题的请求个数
+	int num; //主题的请求个数
 	int t0; //第一个请求时刻
 	int t; //处理一个请求的时间
 	int dt; //相邻两个请求间的间隔

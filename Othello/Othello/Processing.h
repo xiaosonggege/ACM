@@ -8,13 +8,14 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <iostream>
 using namespace std;
 class Processing {
-private :
+private:
 	vector<Topic> v_topic; //主题序列
 	vector<Kehu<int>> v_kehu; //用户序列
-	vector<Topic> wait_rank; //主题等待队列
-	map<int, Kehu<int>> topic_kehu; //待处理主题到可处理该主题的用户列表的散列
+	vector<int> wait_rank; //主题等待队列
+	map<int, vector<Kehu<int>>> topic_kehu; //待处理主题到可处理该主题的用户列表的散列
 public:
 	Processing() = default;
 	Processing(const string &); //参数为文件绝对路径
@@ -23,6 +24,7 @@ public:
 	Processing(Processing &&);
 	Processing & operator=(const Processing &);
 	Processing & operator=(Processing &&);
-
+	ostream & chuli(ostream &);
+	bool is_finishing();
 };
 #endif // !PROCESSING_H

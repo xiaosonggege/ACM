@@ -22,6 +22,7 @@ public:
 	Kehu & operator=(const Kehu &);
 	Kehu & operator=(Kehu &&);
 	int change_next(const int&); //用户计算用户下次空闲时间，第一个参数为此时时间，第二个参数为执行当前任务所需时间
+	int change_next_sparetime(const int &); //用于修改该客户下一空闲时刻值
 };
 template <typename T>
 Kehu<T>::Kehu(const string &str) {
@@ -78,7 +79,12 @@ Kehu<T> & Kehu<T>::operator=(Kehu &&ke) {
 }
 template <typename T>
 int Kehu<T>::change_next(const int &time) {
-	this->next_sparetime = time + this->last_time;
+	this->next_sparetime = time + this->last_sparetime;
+	return 0;
+}
+template <typename T>
+int Kehu<T>::change_next(const int &dt) {
+	this->last_sparetime = dt;
 	return 0;
 }
 #endif // !KEHU_H
