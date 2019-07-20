@@ -26,5 +26,7 @@ public:
 	Processing & operator=(Processing &&);
 	ostream & chuli(ostream &);
 	bool is_finishing();
+	static bool comparing(const Kehu<int> &, const Kehu<int> &);
+	
 };
 #endif // !PROCESSING_H

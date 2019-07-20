@@ -31,7 +31,7 @@ int main()
 {
 	shared_ptr<string> p = make_shared<string>("C:\\Users\\xiaosong\\Desktop\\text.txt");
 	shared_ptr<Processing> pr = make_shared<Processing>(*p);
-
+	pr->chuli(cout);
 	return 0;
 }
 
