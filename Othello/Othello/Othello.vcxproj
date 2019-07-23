@@ -159,12 +159,15 @@
     <ClInclude Include="Ducci.h" />
     <ClInclude Include="Exchange.h" />
     <ClInclude Include="Flooded.h" />
+    <ClInclude Include="Hospital.h" />
     <ClInclude Include="Kehu.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="Operatorhome.h" />
     <ClInclude Include="OthellO.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Processing.h" />
+    <ClInclude Include="Recoverhome.h" />
     <ClInclude Include="Topic.h" />
     <ClInclude Include="Unixls.h" />
     <ClInclude Include="Urban.h" />
@@ -174,8 +177,10 @@
     <ClCompile Include="Cube.cpp" />
     <ClCompile Include="Database.cpp" />
     <ClCompile Include="Ducci.cpp" />
+    <ClCompile Include="Hospital.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Operatorhome.cpp" />
     <ClCompile Include="OthellO.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -184,6 +189,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Processing.cpp" />
+    <ClCompile Include="Recoverhome.cpp" />
     <ClCompile Include="Topic.cpp" />
     <ClCompile Include="Unixls.cpp" />
     <ClCompile Include="Visual.cpp" />

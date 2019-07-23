@@ -10,9 +10,12 @@
 //#include "Exchange.h"
 //#include "Location.h"
 //#include "Map.h"
-#include "Topic.h"
-#include "Kehu.h"
-#include "Processing.h"
+//#include "Topic.h"
+//#include "Kehu.h"
+//#include "Processing.h"
+//#include "Operatorhome.h"
+//#include "Recoverhome.h"
+#include "Hospital.h"
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -30,8 +33,7 @@ using namespace std;
 int main()
 {
 	shared_ptr<string> p = make_shared<string>("C:\\Users\\xiaosong\\Desktop\\text.txt");
-	shared_ptr<Processing> pr = make_shared<Processing>(*p);
-	pr->chuli(cout);
+	shared_ptr<Hospital> hp = make_shared<Hospital>(*p);
 	return 0;
 }
 

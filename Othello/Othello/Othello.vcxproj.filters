@@ -63,6 +63,15 @@
     <ClInclude Include="Processing.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Operatorhome.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Recoverhome.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Hospital.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -96,6 +105,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Processing.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Operatorhome.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Recoverhome.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Hospital.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
