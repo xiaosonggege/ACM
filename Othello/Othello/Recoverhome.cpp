@@ -38,7 +38,8 @@ int Recoverhome::num_op() {
 	return this->num;
 }
 int Recoverhome::spare_time_op(const int &time) {
-	this->spare_time += time;
+	if (time == 0) return this->spare_time;
+	else this->spare_time += time + this->prepare_time;
 	return this->spare_time;
 }
 int Recoverhome::prepare_time_op() {

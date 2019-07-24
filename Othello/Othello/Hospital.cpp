@@ -2,6 +2,8 @@
 #include "Hospital.h"
 #include "Operatorhome.h"
 #include "Recoverhome.h"
+#include "patient_compare.h"
+#include "Patient.h"
 #include <string>
 #include <vector>
 #include <fstream>
@@ -10,6 +12,7 @@
 #include <iostream>
 #include <sstream>
 #include <utility>
+#include <algorithm>
 using namespace std;
 Hospital::Hospital(const string &p) {
 	ifstream ifstrm;
@@ -29,14 +32,16 @@ Hospital::Hospital(const string &p) {
 			flag_times = 1;
 		}
 		else if (flag_times) {
-			shared_ptr<vector<int>> vecp = make_shared<vector<int>>();
 			istringstream istr2(s);
-			istream_iterator<int> iter_in(istr2), eof;
-			vecp->assign(iter_in, eof);
-			this->patients.push_back({ *strp, *vecp });
+			string name;
+			int oper_time, reco_time;
+			istr2 >> oper_time >> reco_time;
+			shared_ptr<Patient> pp = make_shared<Patient>(*strp, oper_time, reco_time);
+			this->patients.push_back(*pp);
 			flag_name = 1;
-			flag_times = 0;
+  			flag_times = 0;
 		}
+
 	}
 	//为手术室队列赋值
 	int spare_time_init = 0;
@@ -123,6 +128,48 @@ Hospital & Hospital::operator=(Hospital &&h) {
 	return *this;
 }
 ostream & Hospital::work(ostream &os) {
-
+	//初始化患者第二队列
+	vector<Patient> v_p;
+	int time = 0;
+	while (judge(time)) {
+		if (!patients.empty())
+			for (auto iter_operhome = operatorhomes.begin(); iter_operhome != operatorhomes.end(); ++iter_operhome) {
+				if (iter_operhome->spare_time_op(0) == time) {
+					//更新患者队列第一个患者的手术完成时间
+					patients.begin()->finish_operator_time(time);
+					//更新患者队列第一个患者的手术室编号
+					patients.begin()->num_pr(iter_operhome->num_op());
+					//存入患者第二队列
+					v_p.push_back(*patients.begin());
+					//更新手术室空闲时间
+					iter_operhome->spare_time_op(time + patients.begin()->operatoration_time());
+					//从患者第一队列中删除
+					patients.erase(patients.begin());
+				}
+			}
+		if (!v_p.empty())
+			//对患者第二队列排序
+			sort(v_p.begin(), v_p.end(), patient_compare());
+			for (auto iter_recohome = recoverhomes.begin(); iter_recohome != recoverhomes.end(); ++iter_recohome) {
+				if (iter_recohome->spare_time_op(0) == time) {
+					for (auto iter_p = v_p.begin(); iter_p != v_p.end(); ++iter_p) {
+						if (iter_p->finish_operator_time(0) == time) {
+							//更新恢复室的空闲时间
+							iter_recohome->spare_time_op(iter_p->recovery_time());
+							//进入恢复室的患者从第二患者队列中出队
+							v_p.erase(iter_p);
+						}
+					}
+				}
+			}
+		++time;
+	}
+	os << time << endl;
 	return os;
+}
+bool Hospital::judge(const int &time) {
+	for (auto iter = recoverhomes.begin(); iter != recoverhomes.end(); ++iter) {
+		if (iter->spare_time_op(0) > time) return 0;
+	}
+	return 1;
 }

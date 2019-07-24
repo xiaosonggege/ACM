@@ -34,6 +34,7 @@ int main()
 {
 	shared_ptr<string> p = make_shared<string>("C:\\Users\\xiaosong\\Desktop\\text.txt");
 	shared_ptr<Hospital> hp = make_shared<Hospital>(*p);
+	hp->work(cout);
 	return 0;
 }
 

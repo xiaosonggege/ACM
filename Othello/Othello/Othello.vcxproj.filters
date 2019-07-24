@@ -72,6 +72,12 @@
     <ClInclude Include="Hospital.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Patient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="patient_compare.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -114,6 +120,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Hospital.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Patient.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
