@@ -6,7 +6,7 @@ using namespace std;
 class Recoverhome {
 private:
 	int num; //恢复室编号
-	int spare_time; //恢复室空闲时间点
+	int spare_time = 0; //恢复室空闲时间点
 	int prepare_time; //恢复室准备时间
 public:
 	Recoverhome() = default;

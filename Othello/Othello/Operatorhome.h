@@ -5,7 +5,7 @@ using namespace std;
 class Operatorhome {
 private:
 	int num; //手术室编号
-	int spare_time; //手术室空闲时间点
+	int spare_time = 0; //手术室空闲时间点
 	int prepare_time; //手术室准备时间
 public:
 	Operatorhome() = default;
