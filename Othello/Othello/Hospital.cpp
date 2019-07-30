@@ -132,9 +132,9 @@ ostream & Hospital::work(ostream &os) {
 	vector<Patient> v_p;
 	int time = 0;
 	while (judge(time)) {
-		if (!patients.empty())
+		if (!patients.empty()) //如果patients非空
 			for (auto iter_operhome = operatorhomes.begin(); iter_operhome != operatorhomes.end(); ++iter_operhome) {
-				if (iter_operhome->spare_time_op(0) == time) {
+				if (iter_operhome->spare_time_op(0) <= time) {
 					//更新患者队列第一个患者的手术完成时间
 					patients.begin()->finish_operator_time(time);
 					//更新患者队列第一个患者的手术室编号
@@ -151,13 +151,14 @@ ostream & Hospital::work(ostream &os) {
 			//对患者第二队列排序
 			sort(v_p.begin(), v_p.end(), patient_compare());
 			for (auto iter_recohome = recoverhomes.begin(); iter_recohome != recoverhomes.end(); ++iter_recohome) {
-				if (iter_recohome->spare_time_op(0) == time) {
+				if (iter_recohome->spare_time_op(0) <= time) {
 					for (auto iter_p = v_p.begin(); iter_p != v_p.end(); ++iter_p) {
-						if (iter_p->finish_operator_time(0) == time) {
+						if (iter_p->finish_operator_time(0) <= time) {
 							//更新恢复室的空闲时间
 							iter_recohome->spare_time_op(iter_p->recovery_time());
 							//进入恢复室的患者从第二患者队列中出队
 							v_p.erase(iter_p);
+							break;
 						}
 					}
 				}
@@ -169,7 +170,7 @@ ostream & Hospital::work(ostream &os) {
 }
 bool Hospital::judge(const int &time) {
 	for (auto iter = recoverhomes.begin(); iter != recoverhomes.end(); ++iter) {
-		if (iter->spare_time_op(0) > time) return 0;
+		if (iter->spare_time_op(0) >= time) return 1;
 	}
-	return 1;
+	return 0;
 }

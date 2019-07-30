@@ -54,7 +54,8 @@ int Patient::recovery_time() {
 	return this->recovery;
 }
 int Patient::finish_operator_time(const int &time) {
-	this->finish_operator += time;
+	if (time == 0) return this->finish_operator;
+	else this->finish_operator = time + this->operatoration;
 	return this->finish_operator;
 }
 int Patient::num_pr(const int &nums) {
