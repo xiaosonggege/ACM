@@ -163,6 +163,7 @@
     <ClInclude Include="Kehu.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="Node.h" />
     <ClInclude Include="Operatorhome.h" />
     <ClInclude Include="OthellO.h" />
     <ClInclude Include="Patient.h" />
@@ -171,6 +172,7 @@
     <ClInclude Include="Processing.h" />
     <ClInclude Include="Recoverhome.h" />
     <ClInclude Include="Topic.h" />
+    <ClInclude Include="TreeLeveling.h" />
     <ClInclude Include="Unixls.h" />
     <ClInclude Include="Urban.h" />
     <ClInclude Include="Visual.h" />
@@ -182,6 +184,7 @@
     <ClCompile Include="Hospital.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Node.cpp" />
     <ClCompile Include="Operatorhome.cpp" />
     <ClCompile Include="OthellO.cpp" />
     <ClCompile Include="Patient.cpp" />
@@ -194,6 +197,7 @@
     <ClCompile Include="Processing.cpp" />
     <ClCompile Include="Recoverhome.cpp" />
     <ClCompile Include="Topic.cpp" />
+    <ClCompile Include="TreeLeveling.cpp" />
     <ClCompile Include="Unixls.cpp" />
     <ClCompile Include="Visual.cpp" />
   </ItemGroup>

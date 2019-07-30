@@ -15,7 +15,8 @@
 //#include "Processing.h"
 //#include "Operatorhome.h"
 //#include "Recoverhome.h"
-#include "Hospital.h"
+//#include "Hospital.h"
+#include "Node.h"
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -30,11 +31,15 @@
 #include <utility>
 #include <tuple>
 using namespace std;
+int fun(int a, int b) {
+	return a + b;
+}
 int main()
 {
 	shared_ptr<string> p = make_shared<string>("C:\\Users\\xiaosong\\Desktop\\text.txt");
-	shared_ptr<Hospital> hp = make_shared<Hospital>(*p);
-	hp->work(cout);
+	//shared_ptr<Hospital> hp = make_shared<Hospital>(*p);
+	//hp->work(cout);
+	
 	return 0;
 }
 
