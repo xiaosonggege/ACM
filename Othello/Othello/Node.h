@@ -15,7 +15,7 @@ public:
 	Node(Node &&);
 	Node & operator=(const Node &);
 	Node & operator=(Node &&);
-	int num_return(); //返回num属性
-	string note_return(); //返回note属性
+	int num_return() const; //返回num属性
+	string note_return() const; //返回note属性
 };
 #endif // !NODE_H

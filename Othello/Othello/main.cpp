@@ -17,6 +17,7 @@
 //#include "Recoverhome.h"
 //#include "Hospital.h"
 #include "Node.h"
+#include "TreeLeveling.h"
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -37,9 +38,8 @@ int fun(int a, int b) {
 int main()
 {
 	shared_ptr<string> p = make_shared<string>("C:\\Users\\xiaosong\\Desktop\\text.txt");
-	//shared_ptr<Hospital> hp = make_shared<Hospital>(*p);
-	//hp->work(cout);
-	
+	shared_ptr<TreeLeveling> t = make_shared<TreeLeveling>(*p);
+	t->print(cout);
 	return 0;
 }
 

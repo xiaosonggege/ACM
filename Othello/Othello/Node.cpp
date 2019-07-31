@@ -27,9 +27,9 @@ Node & Node::operator=(Node &&n) {
 	n.note.clear();
 	return *this;
 }
-int Node::num_return() {
+int Node::num_return() const {
 	return this->num;
 }
-string Node::note_return() {
+string Node::note_return() const {
 	return this->note;
 }

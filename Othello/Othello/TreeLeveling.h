@@ -19,6 +19,7 @@ public:
 	TreeLeveling & operator=(const TreeLeveling &);
 	TreeLeveling & operator=(TreeLeveling &&);
 	ostream & print(ostream &);
+	static bool compare(const Node &, const Node &); //±È½Ïº¯Êý
 };
 #endif // !TREELEVELING_H
 
